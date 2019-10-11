@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{63F5952F-AA53-4E9E-9A13-05C78B0DB5FD}</ProjectGuid>
+    <RootNamespace>DX_FRAMEWORK_v3</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\dsutil.cpp" />
+    <ClCompile Include="Sources\dxAnimation.cpp" />
+    <ClCompile Include="Sources\dxBackBuffer.cpp" />
+    <ClCompile Include="Sources\dxCamera.cpp" />
+    <ClCompile Include="Sources\dxCircle.cpp" />
+    <ClCompile Include="Sources\dxCustomVertex.cpp" />
+    <ClCompile Include="Sources\dxD3DInitialize.cpp" />
+    <ClCompile Include="Sources\dxD3DSettingsDlg.cpp" />
+    <ClCompile Include="Sources\dxGameMgr.cpp" />
+    <ClCompile Include="Sources\dxInput.cpp" />
+    <ClCompile Include="Sources\dxLight.cpp" />
+    <ClCompile Include="Sources\dxMenu.cpp" />
+    <ClCompile Include="Sources\dxMeshAnimation.cpp" />
+    <ClCompile Include="Sources\dxMeshHierarchy.cpp" />
+    <ClCompile Include="Sources\dxMeshTree.cpp" />
+    <ClCompile Include="Sources\dxMgr.cpp" />
+    <ClCompile Include="Sources\dxModel.cpp" />
+    <ClCompile Include="Sources\dxObject.cpp" />
+    <ClCompile Include="Sources\dxParticle.cpp" />
+    <ClCompile Include="Sources\dxPlane.cpp" />
+    <ClCompile Include="Sources\dxPlayer.cpp" />
+    <ClCompile Include="Sources\dxRect.cpp" />
+    <ClCompile Include="Sources\dxScene.cpp" />
+    <ClCompile Include="Sources\dxShape.cpp" />
+    <ClCompile Include="Sources\dxSound.cpp" />
+    <ClCompile Include="Sources\dxSprite.cpp" />
+    <ClCompile Include="Sources\dxStrings.cpp" />
+    <ClCompile Include="Sources\dxTerrain.cpp" />
+    <ClCompile Include="Sources\dxText.cpp" />
+    <ClCompile Include="Sources\dxTexture.cpp" />
+    <ClCompile Include="Sources\dxTimer.cpp" />
+    <ClCompile Include="Sources\dxutil.cpp" />
+    <ClCompile Include="Sources\dxUtility.cpp" />
+    <ClCompile Include="Sources\dxVec2D.cpp" />
+    <ClCompile Include="Sources\dxWorldTransformation.cpp" />
+    <ClCompile Include="Sources\winMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\dsutil.h" />
+    <ClInclude Include="Common\dxDirectives.h" />
+    <ClInclude Include="Common\dxTypes.h" />
+    <ClInclude Include="Common\dxutil.h" />
+    <ClInclude Include="dxCCollision.h" />
+    <ClInclude Include="Includes\dsutil.h" />
+    <ClInclude Include="Includes\dxAnimation.h" />
+    <ClInclude Include="Includes\dxBackBuffer.h" />
+    <ClInclude Include="Includes\dxCamera.h" />
+    <ClInclude Include="Includes\dxCircle.h" />
+    <ClInclude Include="Includes\dxCustomVertex.h" />
+    <ClInclude Include="Includes\dxD3DInitialize.h" />
+    <ClInclude Include="Includes\dxD3DSettingsDlg.h" />
+    <ClInclude Include="Includes\dxGameMgr.h" />
+    <ClInclude Include="Includes\dxInput.h" />
+    <ClInclude Include="Includes\dxLight.h" />
+    <ClInclude Include="Includes\dxMenu.h" />
+    <ClInclude Include="Includes\dxMeshAnimation.h" />
+    <ClInclude Include="Includes\dxMeshHierarchy.h" />
+    <ClInclude Include="Includes\dxMeshStructures.h" />
+    <ClInclude Include="Includes\dxMeshTree.h" />
+    <ClInclude Include="Includes\dxMgr.h" />
+    <ClInclude Include="Includes\dxModel.h" />
+    <ClInclude Include="Includes\dxObject.h" />
+    <ClInclude Include="Includes\dxParticle.h" />
+    <ClInclude Include="Includes\dxPlane.h" />
+    <ClInclude Include="Includes\dxPlayer.h" />
+    <ClInclude Include="Includes\dxRect.h" />
+    <ClInclude Include="Includes\dxScene.h" />
+    <ClInclude Include="Includes\dxShape.h" />
+    <ClInclude Include="Includes\dxSound.h" />
+    <ClInclude Include="Includes\dxSprite.h" />
+    <ClInclude Include="Includes\dxStrings.h" />
+    <ClInclude Include="Includes\dxTerrain.h" />
+    <ClInclude Include="Includes\dxText.h" />
+    <ClInclude Include="Includes\dxTexture.h" />
+    <ClInclude Include="Includes\dxTimer.h" />
+    <ClInclude Include="Includes\dxutil.h" />
+    <ClInclude Include="Includes\dxUtility.h" />
+    <ClInclude Include="Includes\dxVec2D.h" />
+    <ClInclude Include="Includes\dxWorldTransformation.h" />
+    <ClInclude Include="Includes\winMain.h" />
+    <ClInclude Include="Resources\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\directx.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\DX_FRAMEWORK_v3.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
